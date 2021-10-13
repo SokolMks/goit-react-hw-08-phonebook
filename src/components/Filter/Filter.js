@@ -1,35 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import * as contactsActions from '../../redux/contacts/contacts-actions';
-import contactsSelectors from '../../redux/contacts/contacts-selectors';
+import { useSelector, useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import PropTypes from "prop-types";
+import { contactsActions, contactsSelectors } from "../../redux/contacts";
+import s from "./Filter.module.css";
 
-const FilterContact = ({ value, onChange }) => {
+export default function Filter() {
+  const filterInputId = uuidv4();
+  const filterValue = useSelector(contactsSelectors.getFilter);
+  const dispatch = useDispatch();
+  const onChangeFilter = (e) =>
+    dispatch(contactsActions.changeFilterAction(e.target.value));
+
   return (
-    <>
-      <p>Find contacts by name</p>
+    <div className={s.FilterOverlay}>
+      <label htmlFor={filterInputId} className={s.FilterLabel}>
+        Find contacts by name
+      </label>
       <input
+        className={s.FilterInput}
         type="text"
         name="filter"
-        title="Search contacts"
-        value={value}
-        onChange={onChange}
-      />
-    </>
+        value={filterValue}
+        onChange={onChangeFilter}
+        id={filterInputId}
+      ></input>
+    </div>
   );
+}
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
-
-const mapStateToProps = state => ({
-  value: contactsSelectors.getFilter(state),
-});
-
-const mapDispatchToProps = dispatch => ({
-  onChange: e => dispatch(contactsActions.filterContact(e.target.value)),
-});
-
-FilterContact.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(FilterContact);

@@ -1,0 +1,28 @@
+.UserMenu {
+  display: flex;
+  align-items: center;
+  margin-left: 600px;
+}
+
+.UserMenuAvatar {
+  border-radius: 50px;
+}
+
+.UserMenuText {
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.UserMenuButton {
+  margin-left: 5px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  padding: 2px 5px 2px 5px;
+  border: 2px solid rgb(146, 145, 145);
+  border-radius: 3px;
+}

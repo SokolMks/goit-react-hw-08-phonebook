@@ -23,3 +23,7 @@ input {
   border-radius: 5px;
   outline: none;
 }
+
+.FilterLabel {
+  margin-left: 100px;
+}

@@ -1,0 +1,19 @@
+.AuthNavContainer {
+  margin-left: 600px;
+}
+
+.AuthNavLink {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.activeAuthNavLink {
+  color: rgb(140, 40, 212);
+}
+
+.AuthNavLink:not(:last-child) {
+  margin-right: 30px;
+}

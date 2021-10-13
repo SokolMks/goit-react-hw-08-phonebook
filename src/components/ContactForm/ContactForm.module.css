@@ -1,0 +1,33 @@
+.ContactForm {
+  outline: 1px solid black;
+  padding: 15px;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 400px;
+}
+
+.InputOverlay {
+  margin-bottom: 20px;
+}
+
+.InputLabel {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Input {
+  display: block;
+  border: 2px solid rgb(146, 145, 145);
+}
+
+.FormButton {
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  padding: 2px 5px 2px 5px;
+  border: 2px solid rgb(146, 145, 145);
+  border-radius: 3px;
+}
