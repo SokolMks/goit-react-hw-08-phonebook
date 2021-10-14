@@ -51,6 +51,7 @@ export default function SignUpView() {
             required
           />
         </label>
+
         <label className={s.FormInputLabel}>
           Email
           <input
@@ -64,6 +65,7 @@ export default function SignUpView() {
             required
           />
         </label>
+
         <label className={s.FormInputLabel}>
           Password
           <input

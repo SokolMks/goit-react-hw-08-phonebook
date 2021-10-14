@@ -1,13 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 import {
   usersSignUpAction,
   usersLoginAction,
   usersLogoutAction,
   usersfetchCurrentUserAction,
 } from "./auth-actions";
-
+import axios from "axios";
 axios.defaults.baseURL = "https://connections-api.herokuapp.com";
+
 const url = "/users";
 
 const token = {

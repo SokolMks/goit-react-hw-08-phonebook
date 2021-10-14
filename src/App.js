@@ -36,7 +36,7 @@ export default function App() {
             <PublicRoute exact path={paths.home}>
               <HomeView />
             </PublicRoute>
-            <PublicRoute exact path={paths.register} >
+            <PublicRoute exact path={paths.register} restricted>
               <SignUpView />
             </PublicRoute>
             <PublicRoute exact path={paths.login} redirectTo={paths.contacts} restricted>
