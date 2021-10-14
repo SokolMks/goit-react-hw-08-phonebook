@@ -11,7 +11,7 @@
 }
 
 .activeAuthNavLink {
-  color: rgb(140, 40, 212);
+  color: rgb(233, 86, 41);
 }
 
 .AuthNavLink:not(:last-child) {
